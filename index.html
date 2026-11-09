@@ -37,7 +37,7 @@
           <li class="nav-item"><a class="nav-link" href="#ingredients">المكونات</a></li>
           <li class="nav-item"><a class="nav-link" href="#usage">طريقة الاستخدام</a></li>
           <li class="nav-item"><a class="nav-link" href="#reviews">آراء العملاء</a></li>
-          <li class="nav-item"><a class="nav-link" href="#packages">الباقات</a></li>
+          <li class="nav-item"><a class="nav-link" href="#packages">العبوات</a></li>
         </ul>
 
         <div class="nav-actions d-flex align-items-center gap-2">
@@ -61,36 +61,29 @@
     <!-- ============== Main Section =================== -->
     <!-- =============================================== -->
     <section class="hero-section" id="home" data-section>
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6 hero-copy">
-            <span class="eyebrow"><i class="bi bi-stars"></i> عناية تبدأ باختيارك</span>
-            <h1>
-              اهتم بنفسك..
-              <br>
-              <span>وابدأ رحلتك اليوم</span>
-            </h1>
-            <p class="hero-lead">اكتشف منتجنا المصمم ليكون جزءًا من روتينك اليومي، بمكونات مختارة بعناية وتجربة بسيطة
-              تناسب يومك.</p>
-            <div class="hero-actions">
-              <a class="btn btn-main btn-lg" href="#packages">اكتشف الباقات <i class="bi bi-arrow-left"></i></a>
-              <a class="btn btn-soft btn-lg" href="#about">تعرف على المنتج</a>
-            </div>
-            <div class="hero-trust"><span><i class="bi bi-check-circle-fill"></i> طلب سهل وسريع</span><span><i
-                  class="bi bi-truck"></i> الدفع عند الاستلام</span></div>
-          </div>
-          <div class="col-lg-6">
-            <!-- ============ Banner  ===================== -->
-            <div class="hero-visual">
-              <div class="hero-orbit orbit-one"></div>
-              <div class="hero-orbit orbit-two"></div>
-              <div class="product-placeholder">
-                <div class="bottle-cap"></div>
-                <div class="bottle"><span class="bottle-leaf">✿</span></div>
-              </div>
-            </div>
+      <img class="hero-image" src="assets/mainImage.png" alt="Product">
 
+      <div class="container">
+        <div class="hero-copy">
+          <h1>
+            اهتم بنفسك..
+            <br>
+            <span>وابدأ رحلتك اليوم</span>
+          </h1>
+
+
+          <div class="hero-trust ms-4">
+            <span><i class="bi bi-check-circle-fill"></i> طلب سهل وسريع</span>
+            <span><i class="bi bi-truck"></i> الدفع عند الاستلام</span>
           </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-main btn-lg" href="#packages">
+              اكتشف العبوات <i class="bi bi-arrow-left"></i>
+            </a>
+            <a class="btn btn-soft btn-lg" href="#about">تعرف على المنتج</a>
+          </div>
+
         </div>
       </div>
     </section>
@@ -101,7 +94,6 @@
     <section class="section-pad" id="about" data-section>
       <div class="container">
         <div class="section-heading text-center">
-          <span class="eyebrow">تعرف علينا</span>
           <h2>عن <span>المنتج</span></h2>
           <p>كل ما تحتاج معرفته لتتعرف على منتجنا بشكل أوضح.</p>
         </div>
@@ -118,11 +110,12 @@
           <div class="col-lg-7">
             <div class="about-content">
               <h3>خطوة بسيطة في روتينك اليومي</h3>
+
               <p>نقدم لك منتجًا تم اختياره بعناية ليكون جزءًا من روتينك اليومي. نهتم بالتفاصيل، من المكونات إلى طريقة
                 الاستخدام، حتى تكون تجربتك واضحة وسهلة من البداية.</p>
               <p>يمكنك استبدال هذا النص لاحقًا بالوصف النهائي المعتمد للمنتج ومعلوماته الفعلية.</p>
 
-              <a href="#packages" class="inline-link">شاهد الباقات المتاحة <i class="bi bi-arrow-left"></i></a>
+              <a href="#packages" class="inline-link">شاهد العبوات المتاحة <i class="bi bi-arrow-left"></i></a>
             </div>
           </div>
         </div>
@@ -134,7 +127,7 @@
     <!-- =============================================== -->
     <section class="section-pad soft-section" id="ingredients" data-section>
       <div class="container">
-        <div class="section-heading text-center"><span class="eyebrow">داخل المنتج</span>
+        <div class="section-heading text-center">
           <h2>مكونات مختارة <span>بعناية</span></h2>
           <p>تعرف على المكونات الأساسية ومعلوماتها.</p>
         </div>
@@ -202,8 +195,6 @@
           </article>
 
         </div>
-        <div class="usage-note"><i class="bi bi-info-circle"></i><span>يرجى الالتزام بتعليمات الاستخدام الموجودة على
-            عبوة المنتج.</span></div>
       </div>
     </section>
 
@@ -262,8 +253,8 @@
     <section class="section-pad packages-section" id="packages" data-section>
       <div class="container">
         <div class="section-heading text-center"><span class="eyebrow">اختار الأنسب ليك</span>
-          <h2>باقات <span>المنتج</span></h2>
-          <p>قارن بين الباقات واختر اللي يناسبك.</p>
+          <h2>عبوات <span>المنتج</span></h2>
+          <p>قارن بين العبوات واختر اللي يناسبك.</p>
         </div>
         <div class="row g-4 package-grid">
 
@@ -278,12 +269,23 @@
                 <i class="bi bi-check2"></i>
                 6 عبوات
               </p>
-              <div class="package-actions"><button class="btn btn-outline-main order-package"
-                  data-package-id="family-90" data-package="الباقة العائلية">أضف إلى السلة <i
-                    class="bi bi-bag-plus"></i></button><a class="btn btn-main"
-                  href="checkout.html?package=family-90">اطلب الآن <i class="bi bi-arrow-left"></i></a></div><a
-                class="package-details-link" href="product-details.html?package=family-90">تفاصيل المنتج <i
+              <div class="package-actions">
+                <button class="btn btn-outline-main order-package" data-package-id="family-90"
+                  data-package="الباقة العائلية">
+                  أضف إلى السلة
+                  <i class="bi bi-bag-plus"></i>
+                </button>
+                <a class="btn btn-main" href="checkout.html?package=family-90">
+                  اطلب الآن
+                  <i class="bi bi-arrow-left"></i>
+                </a>
+              </div>
+              <a class="package-details-link" href="product-details.html?package=family-90">تفاصيل العرض <i
                   class="bi bi-arrow-left"></i></a>
+              <div class="package-purchase-count">
+                <i class="bi bi-people-fill"></i>
+                <span>تم شراء <strong>100</strong> عبوة من قبل</span>
+              </div>
             </article>
           </div>
 
@@ -298,12 +300,23 @@
                 <i class="bi bi-check2"></i>
                 6 عبوات
               </p>
-              <div class="package-actions"><button class="btn btn-outline-main order-package"
-                  data-package-id="family-90" data-package="الباقة العائلية">أضف إلى السلة <i
-                    class="bi bi-bag-plus"></i></button><a class="btn btn-main"
-                  href="checkout.html?package=family-90">اطلب الآن <i class="bi bi-arrow-left"></i></a></div><a
-                class="package-details-link" href="product-details.html?package=family-90">تفاصيل المنتج <i
+              <div class="package-actions">
+                <button class="btn btn-outline-main order-package" data-package-id="family-90"
+                  data-package="الباقة العائلية">
+                  أضف إلى السلة
+                  <i class="bi bi-bag-plus"></i>
+                </button>
+                <a class="btn btn-main" href="checkout.html?package=family-90">
+                  اطلب الآن
+                  <i class="bi bi-arrow-left"></i>
+                </a>
+              </div>
+              <a class="package-details-link" href="product-details.html?package=family-90">تفاصيل العرض <i
                   class="bi bi-arrow-left"></i></a>
+              <div class="package-purchase-count">
+                <i class="bi bi-people-fill"></i>
+                <span>تم شراء <strong>100</strong> عبوة من قبل</span>
+              </div>
             </article>
           </div>
 
@@ -318,14 +331,26 @@
                 <i class="bi bi-check2"></i>
                 6 عبوات
               </p>
-              <div class="package-actions"><button class="btn btn-outline-main order-package"
-                  data-package-id="family-90" data-package="الباقة العائلية">أضف إلى السلة <i
-                    class="bi bi-bag-plus"></i></button><a class="btn btn-main"
-                  href="checkout.html?package=family-90">اطلب الآن <i class="bi bi-arrow-left"></i></a></div><a
-                class="package-details-link" href="product-details.html?package=family-90">تفاصيل المنتج <i
+              <div class="package-actions">
+                <button class="btn btn-outline-main order-package" data-package-id="family-90"
+                  data-package="الباقة العائلية">
+                  أضف إلى السلة
+                  <i class="bi bi-bag-plus"></i>
+                </button>
+                <a class="btn btn-main" href="checkout.html?package=family-90">
+                  اطلب الآن
+                  <i class="bi bi-arrow-left"></i>
+                </a>
+              </div>
+              <a class="package-details-link" href="product-details.html?package=family-90">تفاصيل العرض <i
                   class="bi bi-arrow-left"></i></a>
+              <div class="package-purchase-count">
+                <i class="bi bi-people-fill"></i>
+                <span>تم شراء <strong>100</strong> عبوة من قبل</span>
+              </div>
             </article>
           </div>
+
 
 
           <div class="col-sm-6 col-xl-3">
@@ -338,14 +363,26 @@
                 <i class="bi bi-check2"></i>
                 6 عبوات
               </p>
-              <div class="package-actions"><button class="btn btn-outline-main order-package"
-                  data-package-id="family-90" data-package="الباقة العائلية">أضف إلى السلة <i
-                    class="bi bi-bag-plus"></i></button><a class="btn btn-main"
-                  href="checkout.html?package=family-90">اطلب الآن <i class="bi bi-arrow-left"></i></a></div><a
-                class="package-details-link" href="product-details.html?package=family-90">تفاصيل المنتج <i
+              <div class="package-actions">
+                <button class="btn btn-outline-main order-package" data-package-id="family-90"
+                  data-package="الباقة العائلية">
+                  أضف إلى السلة
+                  <i class="bi bi-bag-plus"></i>
+                </button>
+                <a class="btn btn-main" href="checkout.html?package=family-90">
+                  اطلب الآن
+                  <i class="bi bi-arrow-left"></i>
+                </a>
+              </div>
+              <a class="package-details-link" href="product-details.html?package=family-90">تفاصيل العرض <i
                   class="bi bi-arrow-left"></i></a>
+              <div class="package-purchase-count">
+                <i class="bi bi-people-fill"></i>
+                <span>تم شراء <strong>100</strong> عبوة من قبل</span>
+              </div>
             </article>
           </div>
+
 
 
         </div>
@@ -360,7 +397,7 @@
           <div><span class="eyebrow">جاهز تبدأ؟</span>
             <h2>اختار باقتك واطلب بسهولة</h2>
             <p>خطوة واحدة تفصلك عن إتمام طلبك.</p>
-          </div><a href="#packages" class="btn btn-light btn-lg">شاهد الباقات <i class="bi bi-arrow-left"></i></a>
+          </div><a href="#packages" class="btn btn-light btn-lg">شاهد العبوات <i class="bi bi-arrow-left"></i></a>
         </div>
       </div>
     </section>
@@ -422,7 +459,7 @@
   <aside class="cart-drawer" id="cartDrawer" aria-label="سلة المشتريات" aria-hidden="true">
 
     <div class="cart-header">
-      <div><span class="eyebrow">طلبك في مكان واحد</span>
+      <div>
         <h2>سلة المشتريات</h2>
       </div>
       <button class="cart-close" id="cartClose" type="button" aria-label="إغلاق السلة">
