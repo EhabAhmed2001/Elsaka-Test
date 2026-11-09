@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="اكتشف المنتج والباقات المتاحة واطلب بسهولة.">
+  <title>السقا للأعشاب الهندية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="القائمة الرئيسية">
+    <div class="container">
+      <!-- ================= logo place =========== -->
+      <a class="navbar-brand brand" href="#home">
+        <span class="brand-mark">
+          <img src="assets/product-3.svg">
+        </span>
+      </a>
+
+      <!-- menu responsive button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="فتح القائمة"><span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+
+        <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">عن المنتج</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ingredients">المكونات</a></li>
+          <li class="nav-item"><a class="nav-link" href="#usage">طريقة الاستخدام</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">آراء العملاء</a></li>
+          <li class="nav-item"><a class="nav-link" href="#packages">الباقات</a></li>
+        </ul>
+
+        <div class="nav-actions d-flex align-items-center gap-2">
+          <button class="cart-nav-btn" id="cartToggle" type="button" aria-label="فتح سلة المشتريات"
+            aria-controls="cartDrawer" aria-expanded="false">
+            <i class="bi bi-bag"></i>
+            <span>السلة</span>
+            <b id="cartBadge" class="cart-badge" aria-live="polite">0</b>
+          </button>
+
+
+          <a class="btn btn-main nav-cta" href="#packages">اطلب الآن <i class="bi bi-arrow-left"></i></a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- =============================================== -->
+    <!-- ============== Main Section =================== -->
+    <!-- =============================================== -->
+    <section class="hero-section" id="home" data-section>
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 hero-copy">
+            <span class="eyebrow"><i class="bi bi-stars"></i> عناية تبدأ باختيارك</span>
+            <h1>
+              اهتم بنفسك..
+              <br>
+              <span>وابدأ رحلتك اليوم</span>
+            </h1>
+            <p class="hero-lead">اكتشف منتجنا المصمم ليكون جزءًا من روتينك اليومي، بمكونات مختارة بعناية وتجربة بسيطة
+              تناسب يومك.</p>
+            <div class="hero-actions">
+              <a class="btn btn-main btn-lg" href="#packages">اكتشف الباقات <i class="bi bi-arrow-left"></i></a>
+              <a class="btn btn-soft btn-lg" href="#about">تعرف على المنتج</a>
+            </div>
+            <div class="hero-trust"><span><i class="bi bi-check-circle-fill"></i> طلب سهل وسريع</span><span><i
+                  class="bi bi-truck"></i> الدفع عند الاستلام</span></div>
+          </div>
+          <div class="col-lg-6">
+            <!-- ============ Banner  ===================== -->
+            <div class="hero-visual">
+              <div class="hero-orbit orbit-one"></div>
+              <div class="hero-orbit orbit-two"></div>
+              <div class="product-placeholder">
+                <div class="bottle-cap"></div>
+                <div class="bottle"><span class="bottle-leaf">✿</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================== -->
+    <!-- ============== About Product =================== -->
+    <!-- =============================================== -->
+    <section class="section-pad" id="about" data-section>
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="eyebrow">تعرف علينا</span>
+          <h2>عن <span>المنتج</span></h2>
+          <p>كل ما تحتاج معرفته لتتعرف على منتجنا بشكل أوضح.</p>
+        </div>
+        <div class="row align-items-center g-5 about-row">
+          <div class="col-lg-5">
+            <div class="about-art">
+
+              <!-- product image that will change -->
+              <img src="assets/product-1.svg">
+
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="about-content">
+              <h3>خطوة بسيطة في روتينك اليومي</h3>
+              <p>نقدم لك منتجًا تم اختياره بعناية ليكون جزءًا من روتينك اليومي. نهتم بالتفاصيل، من المكونات إلى طريقة
+                الاستخدام، حتى تكون تجربتك واضحة وسهلة من البداية.</p>
+              <p>يمكنك استبدال هذا النص لاحقًا بالوصف النهائي المعتمد للمنتج ومعلوماته الفعلية.</p>
+
+              <a href="#packages" class="inline-link">شاهد الباقات المتاحة <i class="bi bi-arrow-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================== -->
+    <!-- ============== ingredient =================== -->
+    <!-- =============================================== -->
+    <section class="section-pad soft-section" id="ingredients" data-section>
+      <div class="container">
+        <div class="section-heading text-center"><span class="eyebrow">داخل المنتج</span>
+          <h2>مكونات مختارة <span>بعناية</span></h2>
+          <p>تعرف على المكونات الأساسية ومعلوماتها.</p>
+        </div>
+
+        <div class="row g-4 ingredient-grid">
+
+          <!-- Loop in ingredient -->
+          <div class="col-sm-6 col-lg-4">
+            <article class="ingredient-card">
+              <div class="ingredient-icon"><i class="bi bi-flower1"></i></div>
+              <h3>المكون الأول</h3>
+              <p>أضف هنا وصفًا مختصرًا ودقيقًا للمكون ومصدره.</p>
+            </article>
+          </div>
+
+          <!-- will remove -->
+          <div class="col-sm-6 col-lg-4">
+            <article class="ingredient-card">
+              <div class="ingredient-icon icon-sand"><i class="bi bi-droplet"></i></div>
+              <h3>المكون الثاني</h3>
+              <p>اكتب نبذة بسيطة عن هذا المكون ودوره في تركيبة المنتج.</p>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <article class="ingredient-card">
+              <div class="ingredient-icon icon-rose"><i class="bi bi-stars"></i></div>
+              <h3>المكون الثالث</h3>
+              <p>يمكنك استبدال هذا المحتوى بالمعلومات الفعلية المعتمدة.</p>
+            </article>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================== -->
+    <!-- ================ Usage ======================== -->
+    <!-- =============================================== -->
+    <section class="section-pad" id="usage" data-section>
+      <div class="container">
+        <div class="section-heading text-center"><span class="eyebrow">بكل سهولة</span>
+          <h2>طريقة <span>الاستخدام</span></h2>
+          <p>خطوات بسيطة تساعدك على معرفة طريقة الاستخدام.</p>
+        </div>
+        <div class="steps-row">
+
+          <article class="step-card"><span class="step-number">01</span>
+            <div class="step-icon"><i class="bi bi-box-seam"></i></div>
+            <h3>جهّز المنتج</h3>
+            <p> هنا الخطوة الأولى من تعليمات الاستخدام.</p>
+          </article>
+
+          <article class="step-card"><span class="step-number">02</span>
+            <div class="step-icon"><i class="bi bi-hand-index-thumb"></i></div>
+            <h3>اتبع التعليمات</h3>
+            <p> تفاصيل الخطوة الثانية بشكل واضح ومختصر.</p>
+          </article>
+
+          <article class="step-card"><span class="step-number">03</span>
+            <div class="step-icon"><i class="bi bi-calendar-check"></i></div>
+            <h3>التزم بالروتين</h3>
+            <p>اكتب أي إرشادات إضافية معتمدة للاستخدام.</p>
+          </article>
+
+        </div>
+        <div class="usage-note"><i class="bi bi-info-circle"></i><span>يرجى الالتزام بتعليمات الاستخدام الموجودة على
+            عبوة المنتج.</span></div>
+      </div>
+    </section>
+
+    <!-- =============================================== -->
+    <!-- =============== Reviews ======================= -->
+    <!-- =============================================== -->
+    <section class="section-pad soft-section" id="reviews" data-section>
+      <div class="container">
+        <div class="section-heading text-center"><span class="eyebrow">تجارب حقيقية</span>
+          <h2>آراء <span>عملائنا</span></h2>
+          <p>يسعدنا مشاركة بعض آراء وتجارب عملائنا.</p>
+        </div>
+        <div class="review-gallery">
+          <!-- whatsapp images -->
+          <button class="review-shot" data-review="review-1" aria-label="عرض رأي العميل الأول">
+            <div class="chat-top"><i class="bi bi-whatsapp"></i><span>WhatsApp</span><small>متصل الآن</small></div>
+            <div class="chat-body">
+              <div class="bubble received">المنتج وصل بسرعة والتعامل ممتاز ❤️<small>١٢:٤٥ م</small></div>
+              <div class="bubble sent">شكرًا جدًا لثقتك فينا 🌿<small>١٢:٤٦ م ✓✓</small></div>
+              <div class="bubble received">تجربة جميلة جدًا، شكرًا ليكم</div>
+
+            </div><span class="zoom-hint"><i class="bi bi-zoom-in"></i> اضغط للتكبير</span>
+          </button>
+
+          <!-- Will Delete -->
+          <button class="review-shot review-alt" data-review="review-2" aria-label="عرض رأي العميل الثاني">
+            <div class="chat-top"><i class="bi bi-whatsapp"></i><span>WhatsApp</span><small>متصل الآن</small></div>
+            <div class="chat-body">
+              <div class="bubble received">بجد مبسوطة بالتعامل والاهتمام بالتفاصيل.</div>
+              <div class="bubble sent">ده من ذوقك، سعداء بتجربتك 💚<small>٠٩:٢٠ ص ✓✓</small></div>
+              <div class="bubble received">إن شاء الله مش آخر مرة</div>
+            </div><span class="zoom-hint"><i class="bi bi-zoom-in"></i> اضغط للتكبير</span>
+          </button>
+
+
+          <button class="review-shot review-third" data-review="review-3" aria-label="عرض رأي العميل الثالث">
+            <div class="chat-top"><i class="bi bi-whatsapp"></i><span>WhatsApp</span><small>متصل الآن</small></div>
+            <div class="chat-body">
+              <div class="bubble received">شكرًا على الذوق والاهتمام، تجربة ممتازة.</div>
+              <div class="bubble sent">نورتينا 🌷<small>٠٥:١٠ م ✓✓</small></div>
+              <div class="bubble received">ربنا يبارك لكم</div>
+            </div>
+
+            <span class="zoom-hint">
+              <i class="bi bi-zoom-in"></i>
+              اضغط للتكبير
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================== -->
+    <!-- ================ Packages ===================== -->
+    <!-- =============================================== -->
+    <section class="section-pad packages-section" id="packages" data-section>
+      <div class="container">
+        <div class="section-heading text-center"><span class="eyebrow">اختار الأنسب ليك</span>
+          <h2>باقات <span>المنتج</span></h2>
+          <p>قارن بين الباقات واختر اللي يناسبك.</p>
+        </div>
+        <div class="row g-4 package-grid">
+
+
+          <div class="col-sm-6 col-xl-3">
+            <article class="package-card">
+              <h3><a class="package-title-link" href="product-details.html?package=family-90">الباقة العائلية</a></h3>
+              <div class="duration">90 يوم</div>
+              <img src="assets/product-2.svg">
+              <div class="package-price">1,550 <small>ج.م</small></div>
+              <p>
+                <i class="bi bi-check2"></i>
+                6 عبوات
+              </p>
+              <div class="package-actions"><button class="btn btn-outline-main order-package"
+                  data-package-id="family-90" data-package="الباقة العائلية">أضف إلى السلة <i
+                    class="bi bi-bag-plus"></i></button><a class="btn btn-main"
+                  href="checkout.html?package=family-90">اطلب الآن <i class="bi bi-arrow-left"></i></a></div><a
+                class="package-details-link" href="product-details.html?package=family-90">تفاصيل المنتج <i
+                  class="bi bi-arrow-left"></i></a>
+            </article>
+          </div>
+
+
+          <div class="col-sm-6 col-xl-3">
+            <article class="package-card">
+              <h3><a class="package-title-link" href="product-details.html?package=family-90">الباقة العائلية</a></h3>
+              <div class="duration">90 يوم</div>
+              <img src="assets/product-2.svg">
+              <div class="package-price">1,550 <small>ج.م</small></div>
+              <p>
+                <i class="bi bi-check2"></i>
+                6 عبوات
+              </p>
+              <div class="package-actions"><button class="btn btn-outline-main order-package"
+                  data-package-id="family-90" data-package="الباقة العائلية">أضف إلى السلة <i
+                    class="bi bi-bag-plus"></i></button><a class="btn btn-main"
+                  href="checkout.html?package=family-90">اطلب الآن <i class="bi bi-arrow-left"></i></a></div><a
+                class="package-details-link" href="product-details.html?package=family-90">تفاصيل المنتج <i
+                  class="bi bi-arrow-left"></i></a>
+            </article>
+          </div>
+
+
+          <div class="col-sm-6 col-xl-3">
+            <article class="package-card">
+              <h3><a class="package-title-link" href="product-details.html?package=family-90">الباقة العائلية</a></h3>
+              <div class="duration">90 يوم</div>
+              <img src="assets/product-2.svg">
+              <div class="package-price">1,550 <small>ج.م</small></div>
+              <p>
+                <i class="bi bi-check2"></i>
+                6 عبوات
+              </p>
+              <div class="package-actions"><button class="btn btn-outline-main order-package"
+                  data-package-id="family-90" data-package="الباقة العائلية">أضف إلى السلة <i
+                    class="bi bi-bag-plus"></i></button><a class="btn btn-main"
+                  href="checkout.html?package=family-90">اطلب الآن <i class="bi bi-arrow-left"></i></a></div><a
+                class="package-details-link" href="product-details.html?package=family-90">تفاصيل المنتج <i
+                  class="bi bi-arrow-left"></i></a>
+            </article>
+          </div>
+
+
+          <div class="col-sm-6 col-xl-3">
+            <article class="package-card">
+              <h3><a class="package-title-link" href="product-details.html?package=family-90">الباقة العائلية</a></h3>
+              <div class="duration">90 يوم</div>
+              <img src="assets/product-2.svg">
+              <div class="package-price">1,550 <small>ج.م</small></div>
+              <p>
+                <i class="bi bi-check2"></i>
+                6 عبوات
+              </p>
+              <div class="package-actions"><button class="btn btn-outline-main order-package"
+                  data-package-id="family-90" data-package="الباقة العائلية">أضف إلى السلة <i
+                    class="bi bi-bag-plus"></i></button><a class="btn btn-main"
+                  href="checkout.html?package=family-90">اطلب الآن <i class="bi bi-arrow-left"></i></a></div><a
+                class="package-details-link" href="product-details.html?package=family-90">تفاصيل المنتج <i
+                  class="bi bi-arrow-left"></i></a>
+            </article>
+          </div>
+
+
+        </div>
+        <p class="package-footnote"><i class="bi bi-shield-check"></i> الدفع نقدًا عند الاستلام — سيتم تأكيد تفاصيل
+          الطلب قبل الشحن.</p>
+      </div>
+    </section>
+
+    <section class="closing-cta">
+      <div class="container">
+        <div class="closing-inner">
+          <div><span class="eyebrow">جاهز تبدأ؟</span>
+            <h2>اختار باقتك واطلب بسهولة</h2>
+            <p>خطوة واحدة تفصلك عن إتمام طلبك.</p>
+          </div><a href="#packages" class="btn btn-light btn-lg">شاهد الباقات <i class="bi bi-arrow-left"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <a class="brand footer-brand" href="#home">
+            <span class="brand-mark-footer">
+              <!-- Logo -->
+              <img src="assets/product-3.svg">
+            </span>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h4>روابط سريعة</h4>
+          <div class="footer-links">
+            <a href="#about">عن المنتج</a>
+            <a href="#ingredients">المكونات</a>
+            <a href="#usage">طريقة الاستخدام</a>
+            <a href="#packages">الباقات</a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4">
+          <h4>تواصل معنا</h4>
+          <div class="footer-links">
+            <a href="https://wa.me/201000000000" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i>
+              واتساب:
+              <span dir="ltr">
+                + 20 100 000 0000
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span> جميع الحقوق محفوظة &copy;<span id="current-year"></span> .</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <a class="whatsapp-float" href="https://wa.me/201000000000" target="_blank" rel="noopener"
+    aria-label="تواصل معنا عبر واتساب">
+    <i class="bi bi-whatsapp"></i>
+    <span class="whatsapp-tooltip">
+      تواصل معنا على واتساب
+    </span>
+  </a>
+
+  <!-- ================== Cart =================== -->
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="سلة المشتريات" aria-hidden="true">
+
+    <div class="cart-header">
+      <div><span class="eyebrow">طلبك في مكان واحد</span>
+        <h2>سلة المشتريات</h2>
+      </div>
+      <button class="cart-close" id="cartClose" type="button" aria-label="إغلاق السلة">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <div class="cart-items" id="cartItems" aria-live="polite"></div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total-row"><span>الإجمالي</span><strong id="cartTotal">0 ج.م</strong></div>
+      <p>الدفع نقدًا عند الاستلام</p>
+      <a class="btn btn-main w-100" id="checkoutButton" href="checkout.html">إتمام الطلب <i
+          class="bi bi-arrow-left"></i></a>
+    </div>
+
+  </aside>
+
+  <div class="modal fade" id="reviewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content review-modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title ms-0 me-auto">رأي أحد العملاء</h5>
+          <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="إغلاق"></button>
+        </div>
+        <div class="modal-body">
+          <div id="reviewModalBody"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+  <script src="cart.js"></script>
+</body>
+
+</html>
