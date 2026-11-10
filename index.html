@@ -20,7 +20,7 @@
       <!-- ================= logo place =========== -->
       <a class="navbar-brand brand" href="#home">
         <span class="brand-mark">
-          <img src="assets/product-3.svg">
+          <img src="assets/LOGO.png">
         </span>
       </a>
 
@@ -61,7 +61,12 @@
     <!-- ============== Main Section =================== -->
     <!-- =============================================== -->
     <section class="hero-section" id="home" data-section>
-      <img class="hero-image" src="assets/mainImage.png" alt="Product">
+
+      <picture>
+        <source media="(max-width: 767px)" srcset="assets/mainMobile.jpg">
+
+        <img class="hero-image" src="assets/desktop.jpg" alt="Product">
+      </picture>
 
       <div class="container">
         <div class="hero-copy">
@@ -94,8 +99,12 @@
     <section class="section-pad" id="about" data-section>
       <div class="container">
         <div class="section-heading text-center">
-          <h2>عن <span>المنتج</span></h2>
-          <p>كل ما تحتاج معرفته لتتعرف على منتجنا بشكل أوضح.</p>
+          <h2>
+            اقوى اعشاب تخسيس فى
+            <span>
+              مصر والوطن العربى
+            </span>
+          </h2>
         </div>
         <div class="row align-items-center g-5 about-row">
           <div class="col-lg-5">
@@ -109,11 +118,24 @@
 
           <div class="col-lg-7">
             <div class="about-content">
-              <h3>خطوة بسيطة في روتينك اليومي</h3>
+              <div class="about-description">
+                <h5>
+                  تعتبر اعشاب السقا الهندية هيا البديل الامن للحقن والبراشيم وعمليات التكميم والتخسيس بشكل عام .
+                  وذلك لاحتوائها على اكتر من 15 نوع عشب هندى نادر .
 
-              <p>نقدم لك منتجًا تم اختياره بعناية ليكون جزءًا من روتينك اليومي. نهتم بالتفاصيل، من المكونات إلى طريقة
-                الاستخدام، حتى تكون تجربتك واضحة وسهلة من البداية.</p>
-              <p>يمكنك استبدال هذا النص لاحقًا بالوصف النهائي المعتمد للمنتج ومعلوماته الفعلية.</p>
+                  </h6>
+
+                  <p class="benefits-title">بتعمل على:</p>
+
+                  <ul class="about-benefits">
+                    <li>تقليل الشهية.</li>
+                    <li>بتعلى معدل الحرق.</li>
+                    <li>بتساعد على التخلص من الامساك والانتفاخات والغازات.</li>
+                    <li>بتساعد على التخلص من عسر الهضم واضطرابات المعده.</li>
+                    <li>اذابة الدهون والشحوم واخراجها من الجسم بطريقه صحيه.</li>
+                    <li>فرق ملحوظ من اول شهر فى الميزان وفى شكل الجسم.</li>
+                  </ul>
+              </div>
 
               <a href="#packages" class="inline-link">شاهد العبوات المتاحة <i class="bi bi-arrow-left"></i></a>
             </div>
@@ -126,43 +148,9 @@
     <!-- ============== ingredient =================== -->
     <!-- =============================================== -->
     <section class="section-pad soft-section" id="ingredients" data-section>
-      <div class="container">
-        <div class="section-heading text-center">
-          <h2>مكونات مختارة <span>بعناية</span></h2>
-          <p>تعرف على المكونات الأساسية ومعلوماتها.</p>
-        </div>
-
-        <div class="row g-4 ingredient-grid">
-
-          <!-- Loop in ingredient -->
-          <div class="col-sm-6 col-lg-4">
-            <article class="ingredient-card">
-              <div class="ingredient-icon"><i class="bi bi-flower1"></i></div>
-              <h3>المكون الأول</h3>
-              <p>أضف هنا وصفًا مختصرًا ودقيقًا للمكون ومصدره.</p>
-            </article>
-          </div>
-
-          <!-- will remove -->
-          <div class="col-sm-6 col-lg-4">
-            <article class="ingredient-card">
-              <div class="ingredient-icon icon-sand"><i class="bi bi-droplet"></i></div>
-              <h3>المكون الثاني</h3>
-              <p>اكتب نبذة بسيطة عن هذا المكون ودوره في تركيبة المنتج.</p>
-            </article>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <article class="ingredient-card">
-              <div class="ingredient-icon icon-rose"><i class="bi bi-stars"></i></div>
-              <h3>المكون الثالث</h3>
-              <p>يمكنك استبدال هذا المحتوى بالمعلومات الفعلية المعتمدة.</p>
-            </article>
-          </div>
-
-
-
-        </div>
-      </div>
+      <!-- <div class="container"> -->
+      <img class="ingredients-image" src="assets/ing.jpg" alt="مكونات المنتج">
+      <!-- </div> -->
     </section>
 
     <!-- =============================================== -->
@@ -176,22 +164,31 @@
         </div>
         <div class="steps-row">
 
-          <article class="step-card"><span class="step-number">01</span>
-            <div class="step-icon"><i class="bi bi-box-seam"></i></div>
-            <h3>جهّز المنتج</h3>
-            <p> هنا الخطوة الأولى من تعليمات الاستخدام.</p>
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-icon">
+              <i class="bi bi-cup"></i>
+            </div>
+            <h3>جهّز الكمية</h3>
+            <p>خد نصف معلقة صغيرة من الأعشاب وحطها في الكوباية.</p>
           </article>
 
-          <article class="step-card"><span class="step-number">02</span>
-            <div class="step-icon"><i class="bi bi-hand-index-thumb"></i></div>
-            <h3>اتبع التعليمات</h3>
-            <p> تفاصيل الخطوة الثانية بشكل واضح ومختصر.</p>
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <div class="step-icon">
+              <i class="bi bi-cup-hot"></i>
+            </div>
+            <h3>أضف الماء الساخن</h3>
+            <p>انزل عليها بماء ساخن وقلبها كويس لحد ما تمتزج.</p>
           </article>
 
-          <article class="step-card"><span class="step-number">03</span>
-            <div class="step-icon"><i class="bi bi-calendar-check"></i></div>
-            <h3>التزم بالروتين</h3>
-            <p>اكتب أي إرشادات إضافية معتمدة للاستخدام.</p>
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-icon">
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <h3>مواعيد الاستخدام</h3>
+            <p>مرة الصبح قبل الفطار بساعة، ومرة بالليل بعد العشاء بساعة.</p>
           </article>
 
         </div>
@@ -410,7 +407,7 @@
           <a class="brand footer-brand" href="#home">
             <span class="brand-mark-footer">
               <!-- Logo -->
-              <img src="assets/product-3.svg">
+              <img src="assets/LOGO.png">
             </span>
           </a>
         </div>
