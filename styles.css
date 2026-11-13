@@ -1893,7 +1893,14 @@
    color: var(--dark)
  }
 
- @media(max-width:420px) {
+ 
+@media (max-width: 767.98px) {
+  .package-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+ /* @media(max-width:420px) {
    .package-actions {
      grid-template-columns: 1fr
    }
@@ -1901,7 +1908,7 @@
    .package-actions .btn {
      font-size: .88rem
    }
- }
+ } */
 
  /* Product details page */
  .product-details-wrap {
