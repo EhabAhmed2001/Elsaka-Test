@@ -215,7 +215,8 @@
  }
 
  .hero-copy h1 span,
- .section-heading h2 span {
+ .section-heading h2 span, 
+ .about-description span {
    color: var(--green)
  }
 
@@ -426,7 +427,7 @@
  }
 
  .section-pad {
-   padding: 94px 0
+   padding: 50px 0
  }
 
  .soft-section {
@@ -671,30 +672,43 @@
  }
 
  .review-gallery {
-   display: grid;
-   grid-template-columns: repeat(3, minmax(0, 1fr));
-   gap: 24px;
-   max-width: 950px;
-   margin: auto
- }
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
 
  .review-shot {
-   border: 1px solid #e4ebe5;
-   background: #e9f1e9;
-   border-radius: 20px;
-   padding: 0;
-   overflow: hidden;
-   text-align: right;
-   min-height: 275px;
-   position: relative;
-   box-shadow: 0 10px 25px rgba(38, 59, 48, .05);
-   transition: .25s
- }
+  width: 100%;
+  height: 450px; 
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+ /* .review-shot {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 12px;
+} */
+.review-shot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
  .review-shot:hover {
    transform: translateY(-5px);
    box-shadow: var(--shadow)
  }
+
 
  .chat-top {
    height: 48px;

@@ -34,16 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
   backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
   // Build a larger preview for the illustrative WhatsApp review cards.
-  const reviewModal = document.getElementById('reviewModal');
-  const reviewModalBody = document.getElementById('reviewModalBody');
-  document.querySelectorAll('.review-shot').forEach(card => {
-    card.addEventListener('click', () => {
-      const clone = card.cloneNode(true);
-      clone.classList.remove('review-shot');
-      clone.classList.add('modal-chat-preview');
-      clone.querySelector('.zoom-hint')?.remove();
-      reviewModalBody.replaceChildren(clone);
-      if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(reviewModal).show();
-    });
-  });
+  // const reviewModal = document.getElementById('reviewModal');
+  // const reviewModalBody = document.getElementById('reviewModalBody');
+  // document.querySelectorAll('.review-shot').forEach(card => {
+  //   card.addEventListener('click', () => {
+  //     const clone = card.cloneNode(true);
+  //     clone.classList.remove('review-shot');
+  //     clone.classList.add('modal-chat-preview');
+  //     clone.querySelector('.zoom-hint')?.remove();
+  //     reviewModalBody.replaceChildren(clone);
+  //     if (window.bootstrap) bootstrap.Modal.getOrCreateInstance(reviewModal).show();
+  //   });
+  // });
 });
