@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة التحكم | متجر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+  <input id="sidebarToggle" type="checkbox" hidden>
+  <span class="page-anchor" id="go-content"></span>
+  <span class="page-anchor" id="go-packages"></span>
+  <span class="page-anchor" id="go-orders"></span>
+  <span class="page-anchor" id="go-reviews"></span>
+  <div class="app-shell">
+    <label class="sidebar-backdrop" id="sidebarBackdrop" for="sidebarToggle" aria-label="إغلاق القائمة"></label>
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">
+          <img src="assets/LOGO.png">
+        </div>
+        <label class="sidebar-close d-lg-none" id="closeSidebar" for="sidebarToggle" role="button" aria-label="إغلاق"><i
+            class="bi bi-x-lg"></i></label>
+      </div>
+      <div class="side-label">القائمة الرئيسية</div>
+      <nav class="side-nav">
+
+        <a class="nav-link active" data-page="content" href="#go-content">
+          <i class="bi bi-window-sidebar"></i>
+          <span>
+            محتوى الصفحة الرئيسية
+          </span>
+        </a>
+
+        <a class="nav-link" data-page="packages" href="#go-packages">
+          <i class="bi bi-box-seam"></i>
+          <span>العبوات</span>
+          <span class="nav-count">4</span>
+        </a>
+        <a class="nav-link" data-page="orders" href="#go-orders">
+          <i class="bi bi-receipt"></i>
+          <span>الطلبات</span>
+          <span class="nav-count alert-count">8</span>
+        </a>
+        <a class="nav-link" data-page="reviews" href="#go-reviews">
+          <i class="bi bi-chat-square-heart"></i>
+          <span>آراء العملاء</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="nav-link logout-link" onclick="toast('زر تسجيل الخروج تجريبي حالياً')">
+          <i class="bi bi-box-arrow-right"></i>
+          <span>تسجيل الخروج</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="d-flex align-items-center gap-3">
+          <label class="icon-btn menu-toggle d-lg-none" id="openSidebar" for="sidebarToggle" role="button"
+            aria-label="فتح القائمة"><i class="bi bi-list"></i></label>
+          <div>
+            <h1 id="pageTitle">مساحة الإدارة</h1>
+          </div>
+        </div>
+        <div class="top-actions">
+          <a class="view-site" href="index.html" target="_blank">
+            <i class="bi bi-box-arrow-up-left"></i>
+            <span>فتح الموقع</span>
+          </a>
+
+          <div class="admin-profile">
+            <div class="avatar">م</div>
+            <div class="profile-copy">
+              <strong>مدير المتجر</strong>
+            </div>
+          </div>
+        </div>
+
+      </header>
+
+      <div class="page-wrap">
+        <!-- CONTENT -->
+        <section class="page-section active" id="page-content">
+          <div class="section-heading">
+            <div>
+              <h2>محتوى الصفحة الرئيسية</h2>
+            </div>
+          </div>
+
+          <form id="contentForm" action="#" method="post">
+            <div class="managed-grid">
+
+              <!-- Hero -->
+              <div class="panel editor-panel managed-wide">
+                <div class="editor-heading">
+                  <span class="editor-icon"><i class="bi bi-stars"></i></span>
+                  <div>
+                    <h3>بداية الموقع</h3>
+                    <p>القسم الرئيسي الذي يظهر أولًا.</p>
+                  </div>
+                </div>
+                <label class="form-label" for="heroTitle">العنوان الرئيسي</label>
+                <input class="form-control" id="heroTitle" name="heroTitle" value="اهتم بنفسك..">
+                <label class="form-label mt-3" for="heroHighlight">الجزء المميز</label>
+                <input class="form-control" id="heroHighlight" name="heroHighlight" value="وابدأ رحلتك اليوم">
+              </div>
+
+              <!-- CTA -->
+              <div class="panel editor-panel managed-wide">
+                <div class="editor-heading">
+                  <span class="editor-icon peach-bg"><i class="bi bi-megaphone"></i></span>
+                  <div>
+                    <h3>جاهز تبدأ؟</h3>
+                    <p>قسم الطلب الموجود في آخر الصفحة.</p>
+                  </div>
+                </div>
+                <label class="form-label" for="ctaEyebrow">النص الصغير</label>
+                <input class="form-control" id="ctaEyebrow" name="ctaEyebrow" value="جاهز تبدأ؟">
+
+                <label class="form-label mt-3" for="ctaTitle">العنوان</label>
+                <input class="form-control" id="ctaTitle" name="ctaTitle" value="اختار باقتك واطلب بسهولة">
+
+                <label class="form-label mt-3" for="ctaDescription">الوصف</label>
+                <textarea class="form-control" id="ctaDescription" name="ctaDescription" rows="3">خطوة واحدة تفصلك عن إتمام طلبك.</textarea>
+              </div>
+
+              <!-- WhatsApp -->
+              <div class="panel editor-panel managed-wide">
+                <div class="editor-heading">
+                  <span class="editor-icon lilac-bg"><i class="bi bi-whatsapp"></i></span>
+                  <div>
+                    <h3>رقم واتساب</h3>
+                    <p>يظهر في الفوتر والزر العائم.</p>
+                  </div>
+                </div>
+                <label class="form-label" for="whatsappDisplay">رقم واتساب</label>
+                <input class="form-control ltr" id="whatsappDisplay" name="whatsapp" type="tel" value="01234567890">
+              </div>
+
+              <!-- Shipping -->
+              <div class="panel managed-wide">
+                <div class="section-heading px-0 pt-0">
+                  <div>
+                    <h3>مصاريف الشحن لكل المحافظات</h3>
+                    <p>عدّل السعر أو أوقف التوصيل لأي محافظة.</p>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table data-table shipping-table">
+                    <thead>
+                      <tr>
+                        <th>المحافظة</th>
+                        <th>السعر</th>
+                        <th>متاح</th>
+                      </tr>
+                    </thead>
+                    <tbody id="shippingBody">
+
+                      <tr data-shipping-id="cairo">
+                        <td><strong data-shipping-name>القاهرة</strong></td>
+                        <td><input class="form-control" data-cost name="shipping_cairo_cost" type="number" min="0" value="20"></td>
+                        <td><input class="form-check-input" data-active name="shipping_cairo_active" type="checkbox" checked></td>
+                      </tr>
+
+                      <tr data-shipping-id="giza">
+                        <td><strong data-shipping-name>الجيزة</strong></td>
+                        <td><input class="form-control" data-cost name="shipping_giza_cost" type="number" min="0" value="25"></td>
+                        <td><input class="form-check-input" data-active name="shipping_giza_active" type="checkbox" checked></td>
+                      </tr>
+
+                      <tr data-shipping-id="alexandria">
+                        <td><strong data-shipping-name>الإسكندرية</strong></td>
+                        <td><input class="form-control" data-cost name="shipping_alexandria_cost" type="number" min="0" value="45"></td>
+                        <td><input class="form-check-input" data-active name="shipping_alexandria_active" type="checkbox" checked></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Single save button -->
+            <div class="d-flex justify-content-start mt-4">
+              <button class="btn-primary-custom" type="submit" id="saveContent">
+                <i class="bi bi-check2"></i>
+                حفظ التغييرات
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- PACKAGES -->
+        <section class="page-section" id="page-packages">
+
+          <div class="section-heading">
+            <div>
+              <h2>العبوات</h2>
+              <p>إضافة وتعديل وحذف العبوات المعروضة في الموقع.</p>
+            </div>
+
+            <button class="btn-primary-custom" id="addPackage" type="button" data-bs-toggle="modal"
+              data-bs-target="#packageModal">
+              <i class="bi bi-plus-lg"></i>
+              إضافة عبوة
+            </button>
+          </div>
+
+          <div class="filter-row">
+            <div class="search-box">
+              <i class="bi bi-search"></i>
+              <input id="packageSearch" placeholder="ابحث باسم العبوة...">
+            </div>
+
+            <select class="form-select filter-select" id="packageStatus">
+              <option value="">كل الحالات</option>
+              <option value="active">نشطة</option>
+              <option value="inactive">غير نشطة</option>
+            </select>
+
+          </div>
+          <div class="panel">
+            <div class="table-responsive">
+              <table class="table data-table align-middle">
+                <thead>
+                  <tr>
+                    <th>العبوة</th>
+                    <th>الأيام</th>
+                    <th>البكتات</th>
+                    <th>السعر</th>
+                    <th>الوزن</th>
+                    <th>عدد الشراء</th>
+                    <th>الحالة</th>
+                    <th>الإجراءات</th>
+                  </tr>
+                </thead>
+                <tbody id="packagesBody">
+                  
+                  <tr data-package-id="trial-15" data-name="الباقة التجريبية" data-days="15" data-price-after="350"
+                    data-packets="1" data-purchase-count="0" data-weight="" data-active="true">
+                    <td>
+                      <div class="product-cell"><span class="managed-thumb empty">
+                          <img src="assets/prod1.png">
+                        </span>
+                        <div>
+                          <strong>الباقة التجريبية</strong>
+                        </div>
+                      </div>
+                    </td>
+                    <td>15 يوم</td>
+                    <td>1</td>
+                    <td>
+                      <strong class="price">350 ج.م</strong>
+                    </td>
+                    <td>—</td>
+                    <td>0</td>
+                    <td>
+                      <span class="status active-status">نشطة</span>
+                    </td>
+                    <td>
+                      <button class="table-icon" type="button" data-bs-toggle="modal" data-bs-target="#packageModal"
+                        data-edit-package="trial-15">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="table-icon danger" data-delete-package="trial-15">
+                        <i class="bi bi-trash3"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr data-package-id="trial-15" data-name="الباقة التجريبية" data-days="15" data-price-after="350"
+                    data-packets="1" data-purchase-count="0" data-weight="" data-active="true">
+                    <td>
+                      <div class="product-cell"><span class="managed-thumb empty">
+                          <img src="assets/prod1.png">
+                        </span>
+                        <div>
+                          <strong>الباقة التجريبية</strong>
+                        </div>
+                      </div>
+                    </td>
+                    <td>15 يوم</td>
+                    <td>1</td>
+                    <td>
+                      <strong class="price">350 ج.م</strong>
+                    </td>
+                    <td>—</td>
+                    <td>0</td>
+                    <td>
+                      <span class="status active-status">نشطة</span>
+                    </td>
+                    <td>
+                      <button class="table-icon" type="button" data-bs-toggle="modal" data-bs-target="#packageModal"
+                        data-edit-package="trial-15">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="table-icon danger" data-delete-package="trial-15">
+                        <i class="bi bi-trash3"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr data-package-id="trial-15" data-name="الباقة التجريبية" data-days="15" data-price-after="350"
+                    data-packets="1" data-purchase-count="0" data-weight="" data-active="true">
+                    <td>
+                      <div class="product-cell"><span class="managed-thumb empty">
+                          <img src="assets/prod1.png">
+                        </span>
+                        <div>
+                          <strong>الباقة التجريبية</strong>
+                        </div>
+                      </div>
+                    </td>
+                    <td>15 يوم</td>
+                    <td>1</td>
+                    <td>
+                      <strong class="price">350 ج.م</strong>
+                    </td>
+                    <td>—</td>
+                    <td>0</td>
+                    <td>
+                      <span class="status active-status">نشطة</span>
+                    </td>
+                    <td>
+                      <button class="table-icon" type="button" data-bs-toggle="modal" data-bs-target="#packageModal"
+                        data-edit-package="trial-15">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="table-icon danger" data-delete-package="trial-15">
+                        <i class="bi bi-trash3"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr data-package-id="trial-15" data-name="الباقة التجريبية" data-days="15" data-price-after="350"
+                    data-packets="1" data-purchase-count="0" data-weight="" data-active="true">
+                    <td>
+                      <div class="product-cell"><span class="managed-thumb empty">
+                          <img src="assets/prod1.png">
+                        </span>
+                        <div>
+                          <strong>الباقة التجريبية</strong>
+                        </div>
+                      </div>
+                    </td>
+                    <td>15 يوم</td>
+                    <td>1</td>
+                    <td>
+                      <strong class="price">350 ج.م</strong>
+                    </td>
+                    <td>—</td>
+                    <td>0</td>
+                    <td>
+                      <span class="status active-status">نشطة</span>
+                    </td>
+                    <td>
+                      <button class="table-icon" type="button" data-bs-toggle="modal" data-bs-target="#packageModal"
+                        data-edit-package="trial-15">
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="table-icon danger" data-delete-package="trial-15">
+                        <i class="bi bi-trash3"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ORDERS -->
+        <section class="page-section" id="page-orders">
+          <div class="section-heading">
+            <div>
+              <h2>الطلبات</h2>
+              <p>البحث برقم الطلب أو الهاتف وفلترة الحالات.</p>
+            </div>
+          </div>
+          <div class="order-summary" id="orderSummary">
+            <div data-summary=""><span>كل الطلبات</span><strong>0</strong></div>
+            <div data-summary="طلب جديد"><span>طلب جديد</span><strong class="orange-text">0</strong></div>
+            <div data-summary="تم الشحن"><span>تم الشحن</span><strong>0</strong></div>
+            <div data-summary="تم التسليم"><span>تم التسليم</span><strong>0</strong></div>
+          </div>
+          <div class="filter-row">
+            <div class="search-box"><i class="bi bi-search"></i><input id="orderSearch"
+                placeholder="رقم الطلب أو رقم الهاتف..."></div>
+            <select class="form-select filter-select" id="statusFilter">
+              <option value="">كل الحالات</option>
+              <option>طلب جديد</option>
+              <option>تم الشحن</option>
+              <option>تم التسليم</option>
+            </select>
+          </div>
+          <div class="panel">
+            <div class="table-responsive">
+              <table class="table data-table">
+                <thead>
+                  <tr>
+                    <th>رقم الطلب</th>
+                    <th>العميل</th>
+                    <th>المحافظة</th>
+                    <th>الهاتف</th>
+                    <th>التاريخ</th>
+                    <th>القطع</th>
+                    <th>الإجمالي</th>
+                    <th>الحالة</th>
+                    <th></th>
+                  </tr>
+                </thead>
+
+                <tbody id="ordersBody">
+                  <tr>
+                    <td>#ORD-1025</td>
+                    <td>أحمد محمد</td>
+                    <td>القاهرة</td>
+                    <td>01012345678</td>
+                    <td>17/11/2026</td>
+                    <td>2</td>
+                    <td>3,100 ج.م</td>
+                    <td><span class="status-badge status-success">تم التوصيل</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#orderModal">
+                        التفاصيل
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#ORD-1024</td>
+                    <td>محمد إبراهيم</td>
+                    <td>الجيزة</td>
+                    <td>01123456789</td>
+                    <td>17/11/2026</td>
+                    <td>1</td>
+                    <td>750 ج.م</td>
+                    <td><span class="status-badge status-warning">طلب جديد</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#orderModal">
+                        التفاصيل
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#ORD-1023</td>
+                    <td>سارة أحمد</td>
+                    <td>الإسكندرية</td>
+                    <td>01234567890</td>
+                    <td>16/11/2026</td>
+                    <td>3</td>
+                    <td>4,650 ج.م</td>
+                    <td><span class="status-badge status-info">قيد التجهيز</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#orderModal">
+                        التفاصيل
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#ORD-1022</td>
+                    <td>محمود علي</td>
+                    <td>المنوفية</td>
+                    <td>01098765432</td>
+                    <td>16/11/2026</td>
+                    <td>1</td>
+                    <td>1,550 ج.م</td>
+                    <td><span class="status-badge status-danger">ملغي</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#orderModal">
+                        التفاصيل
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>#ORD-1021</td>
+                    <td>منى خالد</td>
+                    <td>الدقهلية</td>
+                    <td>01512345678</td>
+                    <td>15/11/2026</td>
+                    <td>2</td>
+                    <td>2,300 ج.م</td>
+                    <td><span class="status-badge status-warning">قيد الشحن</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#orderModal">
+                        التفاصيل
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="managed-pages" id="orderPages"></div>
+          </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section class="page-section" id="page-reviews">
+          <div class="section-heading">
+            <div>
+              <h2>آراء العملاء</h2>
+            </div>
+            <div class="review-toolbar">
+              <label class="btn-outline-custom" id="uploadReviews" for="reviewBulkInput">
+                <i class="bi bi-images"></i>
+                رفع صور
+              </label>
+
+              <input id="reviewBulkInput" type="file" accept="image/*" multiple hidden>
+            </div>
+          </div>
+
+          <div class="reviews-grid" id="reviewsGrid">
+
+            <article class="review-card" data-review-id="review-1" data-title="رأي عميل 01" data-sort-order="1"
+              data-visible="true" data-created-at="2026-01-01T00:00:00.000Z">
+              <img class="review-real-image" src="assets/review1.jpeg">
+
+              <div class="review-actions">
+                <button data-toggle-review="review-1">
+                  <i class="bi bi-eye-slash"></i>
+                  إخفاء
+                </button>
+                <button class="danger-text" data-delete-review="review-1">
+                  <i class="bi bi-trash3"></i>
+                  حذف
+                </button>
+              </div>
+            </article>
+
+            <article class="review-card" data-review-id="review-1" data-title="رأي عميل 01" data-sort-order="1"
+              data-visible="true" data-created-at="2026-01-01T00:00:00.000Z">
+              <img class="review-real-image" src="assets/review1.jpeg">
+
+              <div class="review-actions">
+                <button data-toggle-review="review-1">
+                  <i class="bi bi-eye-slash"></i>
+                  إخفاء
+                </button>
+                <button class="danger-text" data-delete-review="review-1">
+                  <i class="bi bi-trash3"></i>
+                  حذف
+                </button>
+              </div>
+            </article>
+
+            <article class="review-card" data-review-id="review-1" data-title="رأي عميل 01" data-sort-order="1"
+              data-visible="true" data-created-at="2026-01-01T00:00:00.000Z">
+              <img class="review-real-image" src="assets/review1.jpeg">
+
+              <div class="review-actions">
+                <button data-toggle-review="review-1">
+                  <i class="bi bi-eye-slash"></i>
+                  إخفاء
+                </button>
+                <button class="danger-text" data-delete-review="review-1">
+                  <i class="bi bi-trash3"></i>
+                  حذف
+                </button>
+              </div>
+            </article>
+
+            <article class="review-card" data-review-id="review-1" data-title="رأي عميل 01" data-sort-order="1"
+              data-visible="true" data-created-at="2026-01-01T00:00:00.000Z">
+              <img class="review-real-image" src="assets/review1.jpeg">
+
+              <div class="review-actions">
+                <button data-toggle-review="review-1">
+                  <i class="bi bi-eye-slash"></i>
+                  إخفاء
+                </button>
+                <button class="danger-text" data-delete-review="review-1">
+                  <i class="bi bi-trash3"></i>
+                  حذف
+                </button>
+              </div>
+            </article>
+
+            <article class="review-card" data-review-id="review-1" data-title="رأي عميل 01" data-sort-order="1"
+              data-visible="true" data-created-at="2026-01-01T00:00:00.000Z">
+              <img class="review-real-image" src="assets/review1.jpeg">
+
+              <div class="review-actions">
+                <button data-toggle-review="review-1">
+                  <i class="bi bi-eye-slash"></i>
+                  إخفاء
+                </button>
+                <button class="danger-text" data-delete-review="review-1">
+                  <i class="bi bi-trash3"></i>
+                  حذف
+                </button>
+              </div>
+            </article>
+
+
+
+
+          </div>
+        </section>
+
+        <footer class="page-footer">
+          <span>© 2026 جميع الحقوق محفوظة.</span>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <!-- Package modal -->
+  <div class="modal fade" id="packageModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="packageModalTitle">إضافة عبوة</h5>
+          <button class="btn-close me-0 ms-auto" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="packageForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="packageName">اسم العبوة</label>
+                <input class="form-control" id="packageName" value="الباقة التجريبية" required>
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label" for="packageDays">عدد الأيام</label>
+                <input class="form-control" id="packageDays" type="number" min="1" required>
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label" for="packagePackets">عدد البكتات</label>
+                <input class="form-control" id="packagePackets" type="number" min="1" value="15" required>
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label" for="packagePriceBefore">السعر قبل</label>
+                <input class="form-control" id="packagePriceBefore" type="number" min="0"  placeholder="اختياري في حالة وجود خصم">
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label" for="packagePriceAfter">السعر بعد</label>
+                <input class="form-control" id="packagePriceAfter" type="number" min="0" value="350" placeholder="السعر النهائي" required>
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label" for="packagePurchaseCount">عدد الشراء</label>
+                <input class="form-control" id="packagePurchaseCount" type="number" value="234" min="0">
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label" for="packageWeight">الوزن بالجرام</label>
+                <input class="form-control" id="packageWeight" value="500" type="number" min="0" required>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="packageDescription">الوصف</label>
+                <textarea class="form-control" id="packageDescription" rows="3">
+                  وصف العبوة هنا. يمكن أن يكون هذا النص طويلًا ويحتوي على تفاصيل حول محتويات العبوة وفوائدها.
+                </textarea>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="packageImagesInput">الصور</label>
+                <input class="form-control" id="packageImagesInput" type="file" accept="image/*" multiple>
+                <small>اختر الصور ثم حدّد الصورة الافتراضية.</small>
+                <div class="image-editor" id="packageImageEditor"></div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-check form-switch"><input class="form-check-input" id="packageActive" type="checkbox"
+                    checked><label class="form-check-label" for="packageActive">نشطة وتظهر في الموقع</label></div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer"><button class="btn-outline-custom" data-bs-dismiss="modal">إلغاء</button><button
+            class="btn-primary-custom" id="savePackage">حفظ العبوة</button></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Order details modal -->
+  <div class="modal fade" id="orderModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5>تفاصيل الطلب <span>#ORD-1025</span></h5>
+          <button class="btn-close ms-0 me-auto" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body" id="orderModalBody">
+
+          <div class="order-detail-grid">
+            <div class="detail-box">
+              <h6>العميل</h6>
+              <strong>أحمد محمد</strong>
+            </div>
+
+            <div class="detail-box">
+              <h6>رقم الطلب</h6>
+              <strong>#ORD-1025</strong>
+            </div>
+
+            <div class="detail-box">
+              <h6>الهاتف</h6>
+              <strong>01012345678</strong>
+            </div>
+
+            <div class="detail-box">
+              <h6>العنوان</h6>
+              <strong>القاهرة، مدينة نصر، شارع عباس العقاد</strong>
+            </div>
+
+            <div class="detail-box">
+              <h6>التاريخ</h6>
+              <strong>17/11/2026</strong>
+            </div>
+          </div>
+
+          <h6 class="mt-4">ملخص الطلب</h6>
+
+          <div id="orderItems">
+            <div class="order-item-row d-flex justify-content-between align-items-center py-2">
+              <div>
+                <strong>الباقة العائلية</strong>
+                <h6 class="d-block">الكمية: 2</h6>
+              </div>
+              <strong>3,100 ج.م</strong>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between py-2">
+            <span>الشحن</span>
+            <strong>50 ج.م</strong>
+          </div>
+
+          <div class="d-flex justify-content-between total-line py-2">
+            <span>الإجمالي</span>
+            <strong>3,150 ج.م</strong>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-4">
+              <label class="form-label" for="editOrderStatus">الحالة</label>
+              <select class="form-select" id="editOrderStatus">
+                <option>طلب جديد</option>
+                <option>تم الشحن</option>
+                <option selected>تم التسليم</option>
+                <option>ملغي</option>
+              </select>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn-outline-custom" data-bs-dismiss="modal">إغلاق</button>
+          <button class="btn-primary-custom" id="saveOrder">حفظ التعديلات</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Reusable dashboard templates -->
+  <template id="previewImageTemplate"><img src="" alt=""></template>
+
+  <template id="shippingRowTemplate">
+    <tr>
+      <td><strong data-shipping-name></strong></td>
+      <td><input class="form-control" data-cost type="number" min="0"></td>
+      <td><input class="form-check-input" data-active type="checkbox"></td>
+    </tr>
+  </template>
+
+  <template id="ingredientItemTemplate">
+    <div class="content-item" data-ingredient-id="">
+      <div class="content-item-head"><strong data-item-number></strong><button class="content-remove" type="button"
+          data-remove-ingredient=""><i class="bi bi-trash3"></i></button></div>
+      <div class="content-item-grid"><select class="form-select" data-field="icon"></select><input class="form-control"
+          data-field="title" placeholder="اسم المكون"><textarea class="form-control" data-field="description" rows="2"
+          placeholder="وصف المكون"></textarea></div>
+    </div>
+  </template>
+
+  <template id="usageItemTemplate">
+    <div class="content-item" data-step-id="">
+      <div class="content-item-head"><strong data-item-number></strong><button class="content-remove" type="button"
+          data-remove-step=""><i class="bi bi-trash3"></i></button></div>
+      <div class="content-item-grid"><select class="form-select" data-field="icon"></select><input class="form-control"
+          data-field="title" placeholder="عنوان الخطوة"><textarea class="form-control" data-field="description" rows="2"
+          placeholder="شرح الخطوة"></textarea></div>
+    </div>
+  </template>
+
+  <template id="contentEmptyTemplate">
+    <div class="managed-empty" data-empty-text></div>
+  </template>
+
+  <template id="ingredientIconOptionsTemplate">
+    <option value="bi-flower1">زهرة</option>
+    <option value="bi-droplet">قطرة</option>
+    <option value="bi-stars">نجمة</option>
+    <option value="bi-leaf">ورقة</option>
+    <option value="bi-heart">قلب</option>
+    <option value="bi-shield-check">حماية</option>
+  </template>
+
+  <template id="usageIconOptionsTemplate">
+    <option value="bi-box-seam">عبوة</option>
+    <option value="bi-hand-index-thumb">يد</option>
+    <option value="bi-calendar-check">تقويم</option>
+    <option value="bi-check2-circle">علامة صح</option>
+    <option value="bi-clock">وقت</option>
+    <option value="bi-cup-straw">استخدام</option>
+  </template>
+
+  <template id="packageRowTemplate">
+    <tr>
+      <td>
+        <div class="product-cell"><img class="managed-thumb" data-package-image src="" alt=""><span
+            class="managed-thumb empty" data-package-fallback>🌿</span>
+          <div><strong data-package-name></strong><small data-package-description></small></div>
+        </div>
+      </td>
+      <td data-package-days></td>
+      <td data-package-packets></td>
+      <td><span class="price-before" data-package-price-before></span><strong class="price"
+          data-package-price-after></strong></td>
+      <td data-package-weight></td>
+      <td data-package-purchases></td>
+      <td><span class="status" data-package-status></span></td>
+      <td><button class="table-icon" type="button" data-bs-toggle="modal" data-bs-target="#packageModal"
+          data-edit-package=""><i class="bi bi-pencil"></i></button><button class="table-icon danger"
+          data-delete-package=""><i class="bi bi-trash3"></i></button></td>
+    </tr>
+  </template>
+  <template id="packageEmptyRowTemplate">
+    <tr>
+      <td colspan="8" class="managed-empty">لا توجد عبوات مطابقة.</td>
+    </tr>
+  </template>
+
+  <template id="packageImageTemplate">
+    <div class="image-box"><button class="remove-image" type="button" data-remove-image=""><i
+          class="bi bi-x"></i></button><img src="" alt=""><label><input type="radio" name="defaultImage">
+        افتراضية</label></div>
+  </template>
+  <template id="packageImagesEmptyTemplate"><small>لا توجد صور مضافة.</small></template>
+
+  <template id="reviewCardTemplate">
+    <article class="review-card">
+      <img class="review-real-image" src="" alt="">
+      <div class="review-info">
+        <div><strong data-review-title></strong><small data-review-order></small></div><span class="status"
+          data-review-status></span>
+      </div>
+      <div class="review-actions"><button data-toggle-review=""><i class="bi" data-review-toggle-icon></i> <span
+            data-review-toggle-text></span></button><button type="button" data-bs-toggle="modal"
+          data-bs-target="#reviewEditor" data-edit-review=""><i class="bi bi-pencil"></i> تعديل</button><button
+          class="danger-text" data-delete-review=""><i class="bi bi-trash3"></i> حذف</button></div>
+    </article>
+  </template>
+  <template id="reviewsEmptyTemplate">
+    <div class="panel managed-empty" style="grid-column:1/-1">
+      <h3>لا توجد آراء مضافة</h3>
+      <p>اضغط إضافة رأي لرفع أول صورة.</p>
+    </div>
+  </template>
+
+  <template id="orderSummaryTemplate">
+    <div data-summary=""><span></span><strong></strong></div>
+  </template>
+  <template id="orderRowTemplate">
+    <tr>
+      <td><strong class="ltr" data-order-id></strong></td>
+      <td>
+        <div class="customer-cell"><strong data-order-customer></strong><small data-order-governorate></small></div>
+      </td>
+      <td dir="ltr" data-order-phone></td>
+      <td data-order-date></td>
+      <td data-order-items-count></td>
+      <td class="price" data-order-total></td>
+      <td><span class="status" data-order-status></span></td>
+      <td><button class="table-icon" data-open-order=""><i class="bi bi-eye"></i></button></td>
+    </tr>
+  </template>
+  <template id="ordersEmptyRowTemplate">
+    <tr>
+      <td colspan="8" class="managed-empty">لا توجد طلبات.</td>
+    </tr>
+  </template>
+  <template id="orderPageButtonTemplate"><button data-page=""></button></template>
+  <template id="orderItemTemplate">
+    <div class="d-flex justify-content-between py-2 border-bottom"><span data-order-item-name></span><strong
+        data-order-item-total></strong></div>
+  </template>
+
+  <img id="imageResizeSource" src="" alt="" hidden>
+  <canvas id="imageResizeCanvas" hidden></canvas>
+
+  <div class="toast-container position-fixed bottom-0 start-0 p-3">
+    <div id="appToast" class="toast border-0" role="alert">
+      <div class="toast-body"><i class="bi bi-check-circle-fill me-2"></i><span id="toastMessage"></span></div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
