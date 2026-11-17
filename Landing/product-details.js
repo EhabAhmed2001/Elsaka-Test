@@ -14,7 +14,7 @@
   document.getElementById("detailsOrder").href = `checkout.html?package=${encodeURIComponent(id)}`;
 
   // Replace these three local image paths with the real product photos.
-  const images = ["assets/product-1.svg", "assets/product-2.svg", "assets/product-3.svg"];
+  const images = ["../assets/product-1.svg", "../assets/product-2.svg", "../assets/product-3.svg"];
   const image = document.getElementById("galleryImage");
   const dots = document.getElementById("galleryDots");
   let current = 0;
